@@ -75,7 +75,7 @@ After this hands-on lab, you will know the role of Azure Migrate and related mig
 
 ## Overview
 
-Before the lab, you will have pre-deployed an on-premises infrastructure hosted in Hyper-V.  This infrastructure is hosting a multi-tier application called 'SmartHotel', using Hyper-V VMs for each of the application tiers.
+During the automated provisioning of this lab environment, you will have a virtual machine provisioned that contains an on-premises infrastructure hosted in Hyper-V.  This infrastructure is hosting a multi-tier application called 'SmartHotel', using Hyper-V VMs for each of the application tiers.
 
 During the lab, you will migrate this entire application stack to Azure. This will include assessing the on-premises application using Azure Migrate; assessing the database migration using Microsoft Data Migration Assistant (DMA); migrating the database using the Azure Database Migration Service (DMS); and migrating the web and application tiers using Azure Migrate: Server Migration. This last step includes migration of both Windows and Linux VMs.
 
@@ -107,23 +107,15 @@ The application, web, and web proxy tiers will be migrated to Azure VMs using Az
 
 > **Note**: After migration, the application could be modernized to use Azure Application Gateway instead of the Ubuntu Nginx VM, and to use Azure App Service to host both the web tier and application tiers. These optimizations are out of scope of this lab, which is focused only on a 'lift and shift' migration to Azure VMs.
 
-## Requirements
-
-1. You will need Owner or Contributor permissions for an Azure subscription to use in the lab.
-
-2. Your subscription must have sufficient unused quota to deploy the VMs used in this lab.
-
-## Before the hands-on lab
-
-Refer to the [Before the HOL - Line-of-business application migration](./Before%20the%20HOL%20-%20Line-of-business%20application%20migration.md) setup guide manual before continuing to the lab exercises.
-
-**IMPORTANT**: Allow at least 60 minutes to deploy the on-premises environment before you start the lab.
-
 ## Exercise 1: Discover and assess the on-premises environment
 
 Duration: 60 minutes
 
 In this exercise, you will use Azure Migrate: Server Assessment to assess the on-premises environment. This will include selecting Azure Migrate tools, deploying the Azure Migrate appliance into the on-premises environment, creating a migration assessment, and using the Azure Migrate dependency visualization.
+
+All steps will be completed within your lab virtual machine. If you require assistance please raise your hand and the workshop facilitator will contact you and bring you to a breakout room as neccessary.
+
+
 
 ### Task 1: Create the Azure Migrate project and add assessment and migration tools
 
@@ -131,7 +123,7 @@ In this task, you will create the Azure Migrate project and select the assessmen
 
 > **Note**: In this lab, you will use the Microsoft-provided assessment and migration tools within Azure Migrate. A number of third-party tools are also integrated with Azure Migrate for both assessment and migration. You may wish to spend some time exploring these third-party options outside of this lab.
 
-1. Open your browser, navigate to **https://portal.azure.com**, and log in with your Azure subscription credentials.
+1. Open your browser, navigate to **https://portal.azure.com**, and log in with your Azure subscription credentials. The credentials are on the desktop of your lab virtual machine. Follow the link in the automated email to access your lab. You do not need to access the portal.azure.com website from your local machine.
 
 2. Select **All services** in the portal's left navigation, then search for and select **Azure Migrate** to open the Azure Migrate Overview blade, shown below.
 
